@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FuelManagement.UI
+build_property.RootNamespace = FuelManagement.UI
+build_property.ProjectDir = C:\Users\avassi\source\repos\FuelManagement\FuelManagement\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\avassi\source\repos\FuelManagement\FuelManagement
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Role/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVxDcmVhdGVSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Role/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVxFZGl0Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Role/RoleDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVxSb2xlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Rules/CreateRules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUnVsZXNcQ3JlYXRlUnVsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Rules/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUnVsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/User/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/User/RoleToGiveUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxSb2xlVG9HaXZlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Views/Home/Main.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qwcx93s503
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-s4kuzc2pdy

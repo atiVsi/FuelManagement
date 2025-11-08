@@ -1,0 +1,596 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\infrastructure\\esbauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\infrastructure\\esbauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\roletogiveuser.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\roletogiveuser.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\interface\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\interface\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\dtos\\news\\createnewsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\dtos\\news\\createnewsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\rulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\rulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\convertors\\dataconvertor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\convertors\\dataconvertor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\edituser.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\edituser.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\createrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\createrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\interface\\iuserreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\interface\\iuserreportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\services\\interface\\irulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\services\\interface\\irulesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\rules\\createrules.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\rules\\createrules.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\rules\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\rules\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\error.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\error.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\user\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\user\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\rules\\createrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\rules\\createrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\roledetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\roledetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\roledetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\roledetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\editrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\editrole.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement\\pages\\role\\editrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC1B2544-E176-4DA7-B6CD-AA4CD411E4A1}|FuelManagement\\FuelManagement.UI.csproj|solutionrelative:fuelmanagement\\pages\\role\\editrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\dtos\\proposal\\proposalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\dtos\\proposal\\proposalviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|c:\\users\\avassi\\source\\repos\\fuelmanagement\\fuelmanagement.core\\dtos\\proposal\\proposaldetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF5FB1D4-252E-4DF8-B40E-7256380A4D4D}|FuelManagement.Core\\FuelManagement.Core.csproj|solutionrelative:fuelmanagement.core\\dtos\\proposal\\proposaldetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\Interface\\IUserService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IUserService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\Interface\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T08:27:10.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EsbAuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Infrastructure\\EsbAuthenticationService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Infrastructure\\EsbAuthenticationService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Infrastructure\\EsbAuthenticationService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Infrastructure\\EsbAuthenticationService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T08:19:09.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Program.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Program.cs",
+              "RelativeToolTip": "FuelManagement\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T04:46:43.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\UserService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\UserService.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAMwDIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T04:59:55.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateNewsDto.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\News\\CreateNewsDto.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Dtos\\News\\CreateNewsDto.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\News\\CreateNewsDto.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Dtos\\News\\CreateNewsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:16:32.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataConvertor.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Convertors\\DataConvertor.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Convertors\\DataConvertor.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Convertors\\DataConvertor.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Convertors\\DataConvertor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:31:47.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IPermissionService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\Interface\\IPermissionService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IPermissionService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\Interface\\IPermissionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:09:15.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IRulesService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IRulesService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\Interface\\IRulesService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IRulesService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\Interface\\IRulesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:08:16.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Privacy.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Privacy.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Privacy.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Privacy.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Privacy.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:05:19.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleToGiveUser.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\RoleToGiveUser.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\RoleToGiveUser.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\RoleToGiveUser.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\RoleToGiveUser.cshtml.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:05:03.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\PermissionService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\PermissionService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\PermissionService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\PermissionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T06:24:48.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\Index.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\Index.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T06:10:09.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\Index.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:03:13.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RulesService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\RulesService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\RulesService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\RulesService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\RulesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:27:08.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:05:16.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Error.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Error.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Error.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Error.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Error.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:05:13.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Profile.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Profile.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\Profile.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Profile.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\Profile.cshtml.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwDIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:04:55.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateRole.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\CreateRole.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\CreateRole.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\CreateRole.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\CreateRole.cshtml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwA4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:03:08.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Index.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\Index.cshtml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAewC0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:04:45.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EditUser.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\EditUser.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\EditUser.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\EditUser.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\EditUser.cshtml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAIA5wCkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:04:35.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUserReportService.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IUserReportService.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Services\\Interface\\IUserReportService.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Services\\Interface\\IUserReportService.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Services\\Interface\\IUserReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:09:25.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\Index.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:04:44.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Rules\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\Index.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Rules\\Index.cshtml.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAIA9wC4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:04:09.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateRules.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\CreateRules.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Rules\\CreateRules.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\CreateRules.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Rules\\CreateRules.cshtml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADgvycAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:03:55.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\User\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\User\\EditUser.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\User\\EditUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:04:31.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:04:25.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "FuelManagement\\Pages\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-28T08:04:20.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:04:17.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateRules.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\CreateRules.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Rules\\CreateRules.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Rules\\CreateRules.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Rules\\CreateRules.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:03:58.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RoleDetail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\RoleDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\RoleDetail.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\RoleDetail.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\RoleDetail.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:03:43.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RoleDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\RoleDetail.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\RoleDetail.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\RoleDetail.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\RoleDetail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:03:40.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "EditRole.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\EditRole.cshtml.cs",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\EditRole.cshtml.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\EditRole.cshtml.cs",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\EditRole.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:03:22.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EditRole.cshtml",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\EditRole.cshtml",
+              "RelativeDocumentMoniker": "FuelManagement\\Pages\\Role\\EditRole.cshtml",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement\\Pages\\Role\\EditRole.cshtml",
+              "RelativeToolTip": "FuelManagement\\Pages\\Role\\EditRole.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T08:03:18.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProposalViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\Proposal\\ProposalViewModel.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Dtos\\Proposal\\ProposalViewModel.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\Proposal\\ProposalViewModel.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Dtos\\Proposal\\ProposalViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:01:17.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProposalDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\Proposal\\ProposalDetailDto.cs",
+              "RelativeDocumentMoniker": "FuelManagement.Core\\Dtos\\Proposal\\ProposalDetailDto.cs",
+              "ToolTip": "C:\\Users\\avassi\\source\\repos\\FuelManagement\\FuelManagement.Core\\Dtos\\Proposal\\ProposalDetailDto.cs",
+              "RelativeToolTip": "FuelManagement.Core\\Dtos\\Proposal\\ProposalDetailDto.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:00:31.051Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

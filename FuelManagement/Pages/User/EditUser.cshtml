@@ -1,0 +1,115 @@
+﻿@page
+@using FuelManagement.DataLayer.Entities.Permission
+@model FuelManagement.UI.Pages.User.EditUserModel
+@{
+    ViewData["Title"] = "تخصیص نقش";
+    Layout = "_Layout";
+    List<Role> Roles = ViewData["Roles"] as List<Role>;
+}
+
+
+<div class="side-app">
+    <div class="main-container container-fluid">
+        <div class="page-header">
+            <h1 class="page-title">افزودن کارمند</h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">مدیریت</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a asp-page="/User/Index"> لیست کاربران</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">تخصیص نقش</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">تخصیص نقش</h4>
+            </div>
+            <div class="card-body">
+            
+
+                <form method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="user.UserId" />
+
+
+                    <div class="row mb-4">
+
+
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label asp-for="user.Firstname" class="control-label"> نام </label>
+                                <input type="text" asp-for="user.Firstname" class="form-control" disabled="disabled" />
+                            </div>
+                        </div>
+
+
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label asp-for="user.LastName" class="control-label"> نام خانوادگی</label>
+                                <input type="text" asp-for="user.LastName" class="form-control" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label asp-for="user.NationalCodeField" class="control-label">کد ملی</label>
+                                <input type="text" asp-for="user.NationalCodeField" class="form-control" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label asp-for="user.PersonalCode" class="control-label">کد پرسنلی</label>
+                                <input type="text" asp-for="user.PersonalCode" class="form-control" disabled="disabled" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    @*برای کاربر یک نقش هم انتخاب کنیم *@
+
+                    @if (Model.NationalCode != null)
+                    {
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <span class="control-label">انتخاب نقش کاربر</span>
+                            </div>
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="user.UserId">
+
+                            @foreach (var item in Roles)
+                            {
+
+
+
+                                <div class="col-md-4 col-sm-6 mb-3">
+                                    <div class="d-flex align-items-center border rounded-3 p-3 shadow-sm">
+                                        <div class="form-check form-switch m-0">
+                                            <input class="form-check-input" type="checkbox" id="role-@item.Id" name="SelectedRoles" value="@item.Id"
+                                            @(Model.user.UserRoles.Any(r => r == item.Id) ? "checked" : "") />
+                                        </div>
+                                        <label for="role-@item.Id" class="ms-3 mb-0">@item.RoleTitle</label>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    }
+                    <div class="mb-0 mt-4 row justify-content-start">
+                        <div class="col-md-9">
+                            <button class="btn btn-primary">افزودن</button>
+                            <button class="btn btn-secondary">انصراف</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}

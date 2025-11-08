@@ -1,0 +1,475 @@
+﻿@page
+@model FuelManagement.UI.Pages.Rules.IndexModel
+@{
+    ViewData["Title"] = "لیست آیین نامه ها";
+    Layout = "_Layout";
+
+    var startIndex = (Model.PageIndex - 1) * Model.Rules.PageSize;
+    var itemCount = startIndex;
+}
+
+<head>
+    <style>
+        .fade-slow {
+            transition: opacity 1s ease-out !important;
+        }
+    </style>
+</head>
+
+@if (!string.IsNullOrEmpty(Model.Msg))
+{
+    <div aria-live="polite" aria-atomic="true"
+         class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="liveToast" class="toast align-items-center text-white bg-success border-0"
+             role="alert" aria-live="assertive" aria-atomic="true"
+             data-bs-delay="3000" data-bs-autohide="true" data-bs-animation="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    @Html.Raw(System.Net.WebUtility.UrlDecode(Model.Msg))
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var toastEl = document.getElementById('liveToast');
+            var toast = bootstrap.Toast.getOrCreateInstance(toastEl);
+
+            // اضافه کردن کلاس برای افکت آرام‌تر قبل از مخفی شدن
+            toastEl.addEventListener('hide.bs.toast', function () {
+                toastEl.classList.add('fade-slow');
+            });
+
+            toast.show();
+        });
+    </script>
+}
+
+
+<div class="side-app">
+    <div class="main-container container-fluid">
+        <div class="page-header">
+            <h1 class="page-title">لیست آیین نامه ها</h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">اخبار و آیین نامه ها</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">لیست آیین نامه ها</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="row row-cards">
+            <div class="col-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="card-title mb-0">لیست آیین نامه ها </h3>
+                        <div>
+                            <a href="/Rules/CreateRules" class="btn btn-success">
+                                افزودن آیین نامه
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="card-body pt-4">
+                        <div class="grid-margin">
+                            <div class="">
+                                <div class="panel panel-primary">
+                                    <div class="tab-menu-heading border-0 p-0">
+                                        <div class="tabs-menu1">
+                                        </div>
+                                    </div>
+                                    <div class="panel-body tabs-menu-body border-0 pt-0">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab5">
+                                                <div class="table-responsive">
+                                                    <div class="row ">
+                                                        <div class="col-12">
+                                                            <div id="SearchSection">
+                                                                <form method="get">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="text" class="form-control" id="search" name="SearchString" placeholder="جستجو عنوان ...">
+                                                                        <div class="btn-group" role="group" aria-label="First group">
+                                                                            <button type="submit" class="btn btn-primary">جستجو</button>
+                                                                            <a href="/Rules/Index" class="btn btn-outline-primary">نمایش همه</a>
+                                                                            <div class="btn-group" role="group" style="text-align:center;">
+                                                                                <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="false" style="width: 9em;">
+                                                                                    دریافت فایل
+                                                                                </button>
+                                                                                @*                                                                                <ul class="dropdown-menu " style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 40px);" data-popper-placement="bottom-start">
+                                                                                *@
+                                                                                <ul class="dropdown-menu"
+                                                                                    aria-labelledby="btnGroupVerticalDrop1">
+                                                                                    <li><a class="dropdown-item" href="javascript:void(0)" id="btnExport">خروجی اکسل</a></li>
+                                                                                    <li><a class="dropdown-item" href="javascript:void(0)">خروجی Pdf</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <table id="data-table"
+                                                           class="table table-bordered text-nowrap table-striped mb-0">
+                                                        <thead class="border-top">
+                                                            <tr>
+                                                                <th class="bg-transparent border-bottom-0"
+                                                                    style="width: 5%;">ردیف</th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                    تصویر
+                                                                </th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                    عنوان
+                                                                </th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                     توضیحات
+                                                                </th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                    تاریخ ایجاد
+                                                                </th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                    ایجاد شده توسط
+                                                                </th>
+
+                                                                <th class="bg-transparent border-bottom-0">
+                                                                    فعال/غیرفعال
+                                                                </th>
+
+
+                                                                <th class="bg-transparent border-bottom-0"
+                                                                    style="width: 5%;">عملیات</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model.Rules != null)
+                                                            {
+                                                                @foreach (var item in Model.Rules)
+                                                                {
+                                                                    itemCount += 1;
+                                                                    <tr class="border-bottom">
+                                                                        <td class="text-center">
+                                                                            <div class="mt-0 mt-sm-2 d-block">
+                                                                                <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                    @itemCount
+                                                                                </h6>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            @*<div class="d-flex">
+
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        <a href="@item.RuleImage" class="image-link" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-url="@item.RuleImage" target="_blank">
+                                                                                            <img src="@item.RuleImage" alt="تصویر آیین نامه" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
+                                                                                        </a>
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>*@
+
+                                                                            <div class="d-flex">
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        <a href="@item.RuleImage" target="_blank" class="image-link" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-url="@item.RuleImage">
+                                                                                            @if (item.FileType == "pdf")
+                                                                                            {
+
+                                                                                                <a href="@item.RuleImage" target="_blank">
+                                                                                                    <img src="~/assets/images/PDF_file_icon.svg.png" alt="فایل PDF" style="width: 40px; height: 40px;" />
+                                                                                                </a>
+                                                                                            }
+
+                                                                                            else
+                                                                                            {
+                                                                                                <img src="@item.RuleImage" alt="تصویر آیین نامه" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
+
+                                                                                            }
+                                                                                        </a>
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>
+
+
+
+
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex">
+
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        @item.Title
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <div class="d-flex">
+
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        @item.Description
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <div class="d-flex">
+
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        @item.Creationdate
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex">
+
+                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
+                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
+                                                                                        @item.Userlog
+                                                                                    </h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+
+
+                                                                        <td>
+                                                                            <div class="mt-sm-1 d-block">
+                                                                                @if (!item.IsDelete)
+                                                                                {
+                                                                                    <span class="badge bg-success-transparent rounded-pill text-success p-2 px-3">فعال</span>
+
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    <span class="badge bg-danger-transparent rounded-pill text-danger p-2 px-3">غیرفعال</span>
+                                                                                }
+                                                                            </div>
+                                                                        </td>
+
+
+                                                                        <td>
+                                                                            <div class="g-2">
+
+
+                                                                                <button type="button" class="btn text-success btn-sm" data-bs-toggle="modal" data-bs-target="#detailsModal_@item.Id" title="مشاهده جزئیات">
+                                                                                    <span class="fe fe-eye fs-14"></span>
+                                                                                </button>
+
+                                                                                <a href="/Rules/EditNews?id=@item.Id" class="btn text-primary btn-sm" title="ویرایش">
+                                                                                    <span class="fe fe-edit fs-14"></span>
+                                                                                </a>
+
+
+                                                                                <button type="button" class="btn text-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal_@item.Id" title="حذف">
+                                                                                    <span class="fe fe-trash-2 fs-14"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <div class="modal fade" id="deleteModal_@item.Id" tabindex="-1" aria-labelledby="deleteModalLabel_@item.Id" aria-hidden="true">
+                                                                        <div class="modal-dialog">
+                                                                            <form method="post" asp-page-handler="Delete">
+                                                                                <input type="hidden" name="id" value="@item.Id" />
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="deleteModalLabel_@item.Id">حذف آیین نامه</h5>
+                                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        آیا مطمئن هستید که می‌خواهید آیین نامه <strong class="badge bg-danger">@item.Title</strong> را حذف کنید؟
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لغو</button>
+                                                                                        <button type="submit" class="btn btn-danger">حذف</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="modal fade" id="detailsModal_@item.Id" tabindex="-1" aria-labelledby="detailsModalLabel_@item.Id" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="detailsModalLabel_@item.Id">جزئیات آیین نامه</h5>
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                 @*   <div class="text-center mb-4">
+                                                                                        <img src="@item.RuleImage" alt="" style="max-width: 100%; max-height: 300px; object-fit: contain;" />
+                                                                                    </div>*@
+
+                                                                                    <div class="text-center mb-4">
+                                                                                        <img src="@item.RuleImage"
+                                                                                             alt="تصویر ضمیمه"
+                                                                                             style="max-width: 100%; max-height: 300px; object-fit: contain;"
+                                                                                             onerror="this.onerror=null; this.src='assets/images/PDF_file_icon.svg.png';" />
+                                                                                    </div>
+                                                                                    <form>
+                                                                                        <div class="mb-3">
+                                                                                            <label for="title_@item.Id" class="form-label fw-bold">عنوان آیین نامه</label>
+                                                                                            <input type="text" id="title_@item.Id" class="form-control" value="@item.Title" readonly />
+                                                                                        </div>
+                                                                                        <div class="mb-3">
+                                                                                            <label for="description_@item.Id" class="form-label fw-bold">توضیحات</label>
+                                                                                            <textarea id="description_@item.Id" class="form-control" rows="4" readonly>@item.Description</textarea>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6 mb-3">
+                                                                                                <label for="creationDate_@item.Id" class="form-label fw-bold">تاریخ ایجاد</label>
+                                                                                                <input type="text" id="creationDate_@item.Id" class="form-control" value="@item.Creationdate" readonly />
+                                                                                            </div>
+                                                                                           
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">بستن</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                }
+                                                            }
+
+                                                        </tbody>
+
+
+                                                    </table>
+
+
+
+
+
+
+                                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                                        <span class="text-muted">
+                                                            تعداد کل آیتم‌ها: <strong>@Model.Rules.TotalCount</strong>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <!-- 🟦 بلوک صفحه‌بندی -->
+                                                <nav aria-label="Page navigation" class="mt-3">
+                                                    <ul class="pagination">
+                                                        <li class="page-item page-prev @(Model.Rules.HasPreviousPage ? "" : "disabled")">
+                                                            <a class="page-link" href="?pageIndex=@(Model.PageIndex - 1)&searchString=@Model.SearchString">قبلی</a>
+                                                        </li>
+
+                                                        @for (int i = 1; i <= Model.Rules.TotalPages; i++)
+                                                        {
+                                                            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                                                <a class="page-link" href="?pageIndex=@i&searchString=@Model.SearchString">@i</a>
+                                                            </li>
+                                                        }
+
+                                                        <li class="page-item page-next @(Model.Rules.HasNextPage ? "" : "disabled")">
+                                                            <a class="page-link" href="?pageIndex=@(Model.PageIndex + 1)&searchString=@Model.SearchString">بعدی</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                                <!-- 🟦 پایان بلوک صفحه‌بندی -->
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@*پیش نمایش تصویر*@
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">نمایش تصویر</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="تصویر بزرگ" style="max-width: 100%; height: auto;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/xlxs.full.min.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('btnExport');
+            const tbl = document.getElementById('data-table');
+            if (!btn || !tbl) {
+                console.error("Element not found:", { btn, tbl });
+                return;
+            }
+            btn.addEventListener('click', function () {
+                const wb = XLSX.utils.table_to_book(tbl, { sheet: "Sheet1" });
+                XLSX.writeFile(wb, 'Rules.xlsx');
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var imageLinks = document.querySelectorAll('.image-link');
+            var modalImage = document.getElementById('modalImage');
+
+            imageLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // جلوگیری از باز شدن لینک
+                    var imageUrl = this.getAttribute('data-img-url');
+                    modalImage.src = imageUrl;
+                });
+            });
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+}

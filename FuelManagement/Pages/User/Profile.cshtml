@@ -1,0 +1,178 @@
+﻿@page "{id?}"
+@model FuelManagement.UI.Pages.User.ProfileModel
+@{
+    ViewData["Title"] = "پروفایل";
+    Layout = "_Layout";
+
+}
+
+
+<div class="side-app">
+    <div class="main-container container-fluid">
+        <div class="page-header">
+            <h1 class="page-title">پروفایل</h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">مدیریت</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">لیست کاربران</li>
+                    <li class="breadcrumb-item active" aria-current="page">پروفایل</li>
+
+                </ol>
+            </div>
+        </div>
+
+        @if (Model.DetailUSer != null)
+        {
+            <div class="row" dir="rtl">
+                <div class="col-8">
+                    <div class="card">
+                        @*<div class="card-header">
+                    <div class="card-title">Edit Password</div>
+                    </div>*@
+                        <div class="card-body">
+                            
+                            <div class="text-center chat-image mb-5">
+                                <div class="avatar avatar-xxl chat-profile mb-3 brround">
+                                    <a class="" href="profile.html"><img alt="avatar" src="../assets/images/users/7.jpg" class="brround"></a>
+                                </div>
+
+                                <div class="main-chat-msg-name">
+                                    <a href="profile.html">
+                                        <h5 class="mb-1 text-dark fw-semibold">@Model.DetailUSer.Firstname  @Model.DetailUSer.LastName</h5>
+                                    </a>
+                                    @*<p class="text-muted mt-0 mb-0 pt-0 fs-13">@Model.DetailUSer.LastName</p>*@
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">نام کاربری</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text"  value="@Model.DetailUSer.UserName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">کدپرسنلی</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.PersonalCode">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">کد ملی</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.NationalCodeField">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">تاریخ تولد</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.BirthDate">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">نام پدر</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.FatherName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">جنسیت</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.Sex">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">نوع استخدامی</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.ContractName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">محل خدمت</label>
+                                        <div class="wrap-input100 validate-input input-group" id="Password-toggle">
+                                            <input class="input50 form-control" type="text" value="@Model.DetailUSer.ProvinceName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-end">
+                            <a href=/User/Index class="btn btn-danger" >بازگشت</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4" >
+                    <div class="card panel-theme">
+                        <div class="card-header">
+                            <div class="float-start">
+                                <h3 class="card-title">راه های ارتباطی</h3>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="card-body no-padding" >
+                            <ul class="list-group no-margin">
+                                <li class="list-group-item d-flex ps-3">
+                                    <div class="social social-profile-buttons me-2">
+                                        <a class="social-icon text-primary" href="javascript:void(0)"><i class="fe fe-mail"></i></a>
+                                    </div>
+                                    <a href="javascript:void(0)" class="my-auto">@Model.DetailUSer.Email</a>
+                                </li>
+                                <li class="list-group-item d-flex ps-3">
+                                    <div class="social social-profile-buttons me-2">
+                                        <a class="social-icon text-primary" href="javascript:void(0)"><i class="fe fe-map"></i></a>
+                                    </div>
+                                    <a href="javascript:void(0)" class="my-auto">@Model.DetailUSer.Address</a>
+                                </li>
+                                <li class="list-group-item d-flex ps-3">
+                                    <div class="social social-profile-buttons me-2">
+                                        <a class="social-icon text-primary" href="javascript:void(0)"><i class="fe fe-phone"></i></a>
+                                    </div>
+                                    <a href="javascript:void(0)" class="my-auto">@Model.DetailUSer.MobilePhoneNumber</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+       
+        
+
+
+    </div>
+</div>

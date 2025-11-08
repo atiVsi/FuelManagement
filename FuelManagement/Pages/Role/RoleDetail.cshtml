@@ -1,0 +1,125 @@
+﻿@page
+@model FuelManagement.UI.Pages.Role.RoleDetailModel
+@{
+    ViewData["Title"] = "جزئیات نقش";
+    Layout = "_Layout";
+    var itemCount = 0;
+}
+
+
+<div class="side-app">
+
+    <div class="main-container container-fluid">
+
+
+        <div class="page-header">
+            <h1 class="page-title"> جزئیات نقش </h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="/Role/Index">لیست نقش ها</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> <a >جزئیات نقش</a> </li>
+                </ol>
+            </div>
+        </div>
+
+         <div class="row row-cards">
+            <div class="col-12 col-sm-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">جزئیات نقش</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                     
+                                <div class="form-group col-4">
+                                    <label asp-for="Role.RoleTitle" class="control-label">عنوان</label>
+                                
+                                    <input asp-for="Role.RoleTitle" class="form-control" placeholder="عنوان نقش" />
+                                    
+                                </div>
+
+                                <div class="form-group col-4">
+                                    <label class="control-label">وضعیت</label>
+                                    <div class="form-control">
+                                        @if (Model.Role.IsDelete)
+                                        {
+                                            <span class="badge bg-danger-transparent rounded-pill text-danger p-2 px-3">غیرفعال</span>
+
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-success-transparent rounded-pill text-success p-2 px-3">فعال</span>
+
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-4">
+                                    <label class="control-label">تعداد کاربران این نقش</label>
+                                    <div class="form-control">
+                                        @Model.Role.UserRoles.Count 
+
+                                    </div>
+                                </div>
+                        </div>
+                    
+
+                    <div class="row">
+                        <div class="table-responsive d-flex justify-content-center">
+                            <table class="table border text-nowrap text-md-nowrap table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">#</th>
+                                        <th scope="col" class="text-center">نام</th>
+                                        <th scope="col" class="text-center">نام خانوادگی</th>
+                                        <th scope="col" class="text-center">کدملی</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if(Model.Role.UserRoles.Count>0){
+                                        @foreach(var item in Model.Role.UserRoles)
+                                        {
+                                            itemCount++;
+                                            <tr>
+                                                <td>@itemCount</td>
+                                                <td class="text-center">@item.User.Firstname</td>
+                                                <td class="text-center">@item.User.LastName</td>
+                                                <td class="text-center">@item.User.NationalCodeField</td>
+                                            </tr>
+
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="4" class="text-center">هیچ کاربری یافت نشد</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+
+                    <div class="mb-4 me-5 d-flex justify-content-end">
+                        <a asp-page="/Role/Index" class="btn btn-primary">بازگشت</a>
+                    </div>
+
+                            
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

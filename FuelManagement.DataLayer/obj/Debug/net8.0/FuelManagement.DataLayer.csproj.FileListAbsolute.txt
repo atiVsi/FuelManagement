@@ -1,0 +1,14 @@
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\bin\Debug\net8.0\FuelManagement.DataLayer.deps.json
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\bin\Debug\net8.0\FuelManagement.DataLayer.runtimeconfig.json
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\bin\Debug\net8.0\FuelManagement.DataLayer.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\bin\Debug\net8.0\FuelManagement.DataLayer.pdb
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.csproj.AssemblyReference.cache
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.AssemblyInfoInputs.cache
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.AssemblyInfo.cs
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\refint\FuelManagement.DataLayer.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.pdb
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.genruntimeconfig.cache
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\ref\FuelManagement.DataLayer.dll

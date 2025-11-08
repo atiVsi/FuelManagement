@@ -1,0 +1,89 @@
+﻿@page
+@model FuelManagement.UI.Pages.Role.EditRoleModel
+@{
+    ViewData["Title"] = "ویرایش نقش";
+    Layout = "_Layout";
+}
+
+<div class="side-app">
+
+    <div class="main-container container-fluid">
+
+
+        <div class="page-header">
+            <h1 class="page-title"> ویرایش نقش </h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="/Role/Index">لیست نقش ها</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> ویرایش نقش </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row row-cards">
+            <div class="col-12 col-sm-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">ویرایش نقش</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+                            <input type="hidden" name="id" value="@Model.Role.Id" />
+                            <div class="form-group col-12">
+                                <label asp-for="RoleTitle" class="control-label">عنوان</label>
+                                <input asp-for="RoleTitle" class="form-control"  placeholder="عنوان نقش" />
+                                <span asp-validation-for="RoleTitle" class="text-danger"></span>
+                            </div>
+
+
+
+
+                            <div class="col-12">
+                                <div class="form-group m-0">
+                                    <div class="form-label">انتخاب سطح دسترسی</div>
+                                    <div class="custom-controls-stacked">
+                                        <div class="row">
+                                            @foreach (var item in Model.Permission)
+                                            {
+                                                var isChecked = Model.Role.RolePermissions.Any(r => r.PermissionId == item.Id);
+                                                <div class="col-md-3">
+                                                    <label class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="permissionIds" value="@item.Id" @(isChecked ? "checked" : "")>
+                                                        <span class="custom-control-label">@item.PermissionTitle</span>
+                                                    </label>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="bRedirect" value="true" />
+
+                            <div class="mb-0 mt-4 row justify-content-end">
+                                <div class="col-md-9">
+                                    <button class="btn btn-primary" type="submit">ثبت</button>
+                                    <a class="btn btn-secondary" href="/Role/Index">انصراف</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>            <!-- COL-END -->
+        </div>
+
+
+
+
+    </div>
+</div>
+@section Scripts
+    {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
