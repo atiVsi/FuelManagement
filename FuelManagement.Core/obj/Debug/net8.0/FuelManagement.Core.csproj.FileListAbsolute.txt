@@ -13,3 +13,4 @@ C:\Users\avassi\source\repos\FuelManagement\FuelManagement.Core\obj\Debug\net8.0
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.Core\obj\Debug\net8.0\refint\FuelManagement.Core.dll
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.Core\obj\Debug\net8.0\FuelManagement.Core.pdb
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.Core\obj\Debug\net8.0\ref\FuelManagement.Core.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.Core\obj\Debug\net8.0\FuelManagement.Core.sourcelink.json

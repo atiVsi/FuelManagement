@@ -1,23 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using FuelManagement.Core.Dtos.UserDto;
+﻿using FuelManagement.Core.Dtos.UserDto;
+using FuelManagement.Core.Infrastructure;
 using FuelManagement.Core.Services.Interface;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net;
 
 namespace FuelManagement.UI.Pages.User
 {
     public class RoleToGiveUserModel : PageModel
     {
-
         private readonly IUserService _userService;
-        private IPermissionService _permissionService;
+        private readonly IPermissionService _permissionService;
 
         public RoleToGiveUserModel(IUserService userService, IPermissionService permissionService)
         {
             _userService = userService;
             _permissionService = permissionService;
         }
-
 
         [BindProperty]
         public RoleToGiveUser user { get; set; }
@@ -27,53 +26,48 @@ namespace FuelManagement.UI.Pages.User
         [BindProperty]
         public string NationalCode { get; set; }
 
-
-
-        public async Task OnGetAsync(string userName,string? msg)
+        public async Task OnGetAsync(string userName, string? msg)
         {
             Msg = msg;
-            ViewData["Roles"] = _permissionService.Get().Where(r => !r.IsDelete)
-    .ToList(); ;
 
+            ViewData["Roles"] = _permissionService.Get()
+                .Where(r => !r.IsDelete)
+                .ToList();
 
-            if(string.IsNullOrWhiteSpace(userName))
-            {
+            if (string.IsNullOrWhiteSpace(userName))
                 return;
-            }
 
-            // اول بررسی کن کاربر توی دیتا بیس خودمون هست یا نه
-            var userId = _userService.GetUserByNationalCode(userName);
-            if(userId != null)
+            var userEntity = _userService.GetUserByNationalCode(userName);
+            if (userEntity != null)
             {
-                user = _userService.GetRoleByUserId(userId.Id);
+                user = _userService.GetRoleByUserId(userEntity.Id);
                 NationalCode = user.NationalCodeField;
-            }
-            else
-            {
-                // برو اطلاعات کاربر رو از سرویس بگیر
-                //var personalUser = _userService.GetUserByNationalCodeInCast(userName);
-                //if(personalUser != null)
-                //{
-                //    user = _userService.GetRoleByUserId(personalUser.Id);
-                //    NationalCode = user.NationalCodeField;
-                //}
             }
         }
 
-
-
-
-        public IActionResult OnPost(List<long> SelectedRoles, bool bRedirect)
+        public IActionResult OnPost(List<long> SelectedRoles)
         {
-            
-                _permissionService.EditRolesUser(user.UserId, SelectedRoles, User.Identity.Name);
-                //var fullName = $"{user.Firstname} {user.LastName}";
-                var notif = WebUtility.UrlEncode($"کاربر { user.Firstname + " " + user.LastName} افزوده شد");
+            if (user == null)
+                return Page();
 
+            // ساخت Profile از user
+            Profile profile = new Profile
+            {
+                userNameField = user.UserName,
+                firstNameField = user.Firstname,
+                lastNameField = user.LastName,
+                nationalCodeField = user.NationalCodeField,
+                mobileNumberField = user.MobilePhoneNumber
+            };
 
+            // اضافه کردن کاربر
+            var newUser = _userService.AddUser(profile);
 
-                return Redirect($"/User?msg={notif}");
-           
+            // اختصاص نقش‌ها
+            _permissionService.EditRolesUser(newUser.Id, SelectedRoles, User.Identity.Name);
+
+            var notif = WebUtility.UrlEncode($"کاربر {newUser.Firstname + " " + newUser.LastName} افزوده شد");
+            return Redirect($"/User?msg={notif}");
         }
     }
 }

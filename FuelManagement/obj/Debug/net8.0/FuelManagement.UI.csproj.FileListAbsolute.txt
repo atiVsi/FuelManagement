@@ -193,3 +193,5 @@ C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\refi
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\FuelManagement.UI.pdb
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\FuelManagement.UI.genruntimeconfig.cache
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\ref\FuelManagement.UI.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\FuelManagement.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement\obj\Debug\net8.0\FuelManagement.UI.sourcelink.json

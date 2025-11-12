@@ -12,3 +12,4 @@ C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\n
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.pdb
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.genruntimeconfig.cache
 C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\ref\FuelManagement.DataLayer.dll
+C:\Users\avassi\source\repos\FuelManagement\FuelManagement.DataLayer\obj\Debug\net8.0\FuelManagement.DataLayer.sourcelink.json

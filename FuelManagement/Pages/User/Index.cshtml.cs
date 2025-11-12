@@ -15,48 +15,27 @@ namespace FuelManagement.UI.Pages.User
             _userService = userService;
         }
 
-
         [BindProperty]
-        //public List<UserViewModel> Users { get; set; }
-        public PaginatedList<UserViewModel> Users { get; set; }
-
+        public PaginatedList<UserViewModel> Users { get; set; } = default!;
 
         [BindProperty(SupportsGet = true)]
         public int PageIndex { get; set; } = 1;
-        public int PageSize { get; set; } = 10;
-
-
-        [BindProperty(SupportsGet = true)]
-        public string FullName { get; set; }
-
-        public string? Msg { get; set; }
-
 
         [BindProperty(SupportsGet = true)]
         public string? SearchString { get; set; }
 
+        public string? Msg { get; set; }
 
-        public void OnGet(int? pageIndex, string? searchString,string? msg)
+        public void OnGet(int? pageIndex, string? searchString, string? msg)
         {
             Msg = msg;
-            // نگهداری عبارت جستجو
+            
             SearchString = searchString ?? "";
             PageIndex = pageIndex ?? 1;
-            //FullName = fullName;
-            //Users = _userService.GetUsersVmPaged(SearchString, PageIndex, PageSize); 
-            
+            string query = string.IsNullOrWhiteSpace(SearchString) ? "" : SearchString;
+            Users = _userService.GetUsersVmPaged(query, PageIndex, 10)
+                    ?? new PaginatedList<UserViewModel>(new List<UserViewModel>(), 0, PageIndex, 10);
+
         }
-
-
-
-        //public void OnGet(string? msg = null)
-        //{
-        //    Msg = msg;
-        //    Users = _userService.GetUsersVm(FullName);
-        //}
-        //public void OnPost(long id)
-        //{
-        //    Users = _userService.GetUsersVm(FullName);
-        //}
     }
 }

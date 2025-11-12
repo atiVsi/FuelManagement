@@ -1,6 +1,7 @@
 ﻿using FuelManagement.Core.Convertors;
 using FuelManagement.Core.Dtos.Pagination;
 using FuelManagement.Core.Dtos.UserDto;
+using FuelManagement.Core.Infrastructure;
 using FuelManagement.Core.Services.Interface;
 using FuelManagement.DataLayer.Context;
 using FuelManagement.DataLayer.Entities.User;
@@ -42,57 +43,48 @@ public class UserService : RepositoryBase<long, User>, IUserService
     }
     public List<UserViewModel> GetUsersVm(string fullName)
     {
-        return null;
-        //IQueryable<User> user = _context.Users;
+        //return null;
+        IQueryable<User> user = _context.Users;
 
-        //if (fullName != null)
-        //{
-        //    user = user.Where(x => (x.Firstname + " " + x.LastName).Contains(fullName));
-        //}
-        //return user.Select(x => new UserViewModel
-        //{
-        //    Id = x.Id,
-        //    LastName = x.LastName,
-        //    FirstName = x.Firstname,
-        //    NationalCode = x.NationalCodeField,
-        //    RegisteriDate = x.CreationDate,
-        //    RegisteriDate_fa = x.CreationDate.ToShamsi(),
-        //}).ToList();
+        if (fullName != null)
+        {
+            user = user.Where(x => (x.Firstname + " " + x.LastName).Contains(fullName));
+        }
+        return user.Select(x => new UserViewModel
+        {
+            Id = x.Id,
+            LastName = x.LastName,
+            FirstName = x.Firstname,
+            NationalCode = x.NationalCodeField,
+            RegisteriDate = x.CreationDate,
+            RegisteriDate_fa = x.CreationDate.ToShamsi(),
+        }).ToList();
     }
 
-    //public User AddUser(Profile profile)
-    //{
-        //return null;
-        //User user = new User(Convert.ToString(profile.PersonalCode),
-        //    profile.userNameField, Convert.ToString(profile.firstNameField),
-        //    profile.lastNameField, profile.nationalCodeField,
-        //    Convert.ToString(profile.postalField),
-        //    profile.mobileNumberField, profile.emailField,
-        //    Convert.ToString(profile.addressField),
-        //    Convert.ToString(profile.birthDateField),
-        //    profile.isEmployeeField, Convert.ToString(profile.ProvinceName),
-        //    Convert.ToString(profile.FatherName), profile.JobState_1,
-        //    Convert.ToString(profile.CreditNumber),
-        //    Convert.ToString(profile.Sex), profile.EmployeeDate, profile.ContractName, profile.sumSalary, profile.postName, profile.contractBy, profile.contractByTitle);
-
+    public User AddUser(Profile profile)
+    {
+        Console.WriteLine("Reached AddUser");
+        User user = new User(
+            userName: Convert.ToString(profile.userNameField),
+            firstname: Convert.ToString(profile.firstNameField),
+            lastName: Convert.ToString(profile.lastNameField),
+            nationalCodeField: Convert.ToString(profile.nationalCodeField),
+            mobilePhoneNumber: Convert.ToString(profile.mobileNumberField)
+        );
         //Create(user);
         //SaveChanges();
+        _context.Users.Add(user);  // اضافه کردن به DbSet
+        _context.SaveChanges();    // ثبت تغییرات در دیتابیس
 
-        //var avatar = new UserAvatar(profile.avatarField.tinyField,
-        //    profile.avatarField.smallField, profile.avatarField.mediumField,
-        //    profile.avatarField.largeField, profile.avatarField.masterField, user.Id);
-        //_context.UserAvatars.Add(avatar);
-        //SaveChanges();
-
-        //return user;
-    //}
+        return user;
+    }
 
     public void UpdateUser(User user)
     {
 
-        user.Edit(user.UserName, user.Firstname, user.LastName
-            , user.NationalCodeField, user.MobilePhoneNumber, user.Email, user.EditTime, user.UserLog);
-        SaveChanges();
+        //user.Edit(user.UserName, user.Firstname, user.LastName
+        //    , user.NationalCodeField, user.MobilePhoneNumber,user.EditTime, user.UserLog);
+        //SaveChanges();
     }
     public void DeleteUser(int id, string userLog)
     {
@@ -310,10 +302,10 @@ public class UserService : RepositoryBase<long, User>, IUserService
     //برای گرفتن لیست کاربران و دریافت فیلترها
     public PaginatedList<UserViewModel> GetUsersVmPaged(string fullName, int pageIndex, int pageSize)
     {
-        return null;
-        //var all = GetUsersVm(fullName); // لیست کامل پس از فیلتر
-        //return PaginatedList<UserViewModel>.Create(all, pageIndex, pageSize);
+        //return null;
+        var all = GetUsersVm(fullName); // لیست کامل پس از فیلتر
+        return PaginatedList<UserViewModel>.Create(all, pageIndex, pageSize);
     }
 
-
+   
 }
