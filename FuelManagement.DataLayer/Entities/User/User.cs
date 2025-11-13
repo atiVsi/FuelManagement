@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FuelManagement.DataLayer.Entities.Permission;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FuelManagement.DataLayer.Entities.User
@@ -27,6 +28,9 @@ namespace FuelManagement.DataLayer.Entities.User
 
         [Display(Name = "زمان تغییر")]
         public DateTime? EditTime { get; private set; }
+
+        // اضافه کردن ویژگی UserRoles برای ذخیره ارتباط با نقش‌ها
+        //public List<UserRole> UserRoles { get; private set; } = new List<UserRole>();
 
         public User(string userName, string firstname, string lastName, string nationalCodeField, string mobilePhoneNumber)
         {

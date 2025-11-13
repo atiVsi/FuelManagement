@@ -25,6 +25,7 @@ public class Permission : EntityBase
 
     [ForeignKey("ParentId")]
     public List<Permission> Permissions { get; private set; }
+    public string NationalCodeField { get; set; }
 
 
     #endregion

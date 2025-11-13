@@ -33,10 +33,11 @@ public class RolePermission : EntityBase
     {
     }
 
-    public RolePermission(long id, long roleId, long permissionId)
+    // سازنده جدید که فقط RoleId و PermissionId را دریافت می‌کند
+    public RolePermission(long roleId, long permissionId)
     {
         RoleId = roleId;
         PermissionId = permissionId;
-        Id = id;
     }
+
 }

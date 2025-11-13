@@ -1,13 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FuelManagement.Core.Dtos.RoleVm;
 using FuelManagement.Core.Services.Interface;
 using FuelManagement.DataLayer.Entities.Permission;
+using System.Collections.Generic;
 
 namespace FuelManagement.UI.Pages.Role
 {
-    //[Authorize]
     public class CreateRoleModel : PageModel
     {
         private readonly IPermissionService _permissionService;
@@ -33,26 +32,18 @@ namespace FuelManagement.UI.Pages.Role
 
         public IActionResult OnPost(List<long> permissionIds, bool bRedirect)
         {
+            Role.UserLog = User.Identity?.Name ?? "System";
 
-            if (bRedirect)
+            var roleEntity = new DataLayer.Entities.Permission.Role(Role.RoleTitle, Role.UserLog, 0);
+            var roleId = _permissionService.AddRole(roleEntity);
+
+            if (permissionIds != null && permissionIds.Count > 0)
             {
-
-                Role.UserLog = User.Identity.Name;
-                var roleId = _permissionService.AddRole(new DataLayer.Entities.Permission.Role(Role.RoleTitle, Role.UserLog, 0));
                 _permissionService.AddPermissionsToRole(roleId, permissionIds);
-
-                var notif = System.Net.WebUtility.UrlEncode($"نقش {Role.RoleTitle}  افزوده شد ");
-                return Redirect($"/Role?msg= {notif}");
             }
-            else
-            {
-                Role.UserLog = User.Identity.Name;
-                var roleId = _permissionService.AddRole(new DataLayer.Entities.Permission.Role(Role.RoleTitle, Role.UserLog, 0));
-                _permissionService.AddPermissionsToRole(roleId, permissionIds);
 
-                var notif = System.Net.WebUtility.UrlEncode($"نقش {Role.RoleTitle}  افزوده شد");
-                return Redirect($"/Role?msg= {notif}");
-            }
+            var notif = System.Net.WebUtility.UrlEncode($"نقش {Role.RoleTitle} افزوده شد");
+            return Redirect($"/Role?msg={notif}");
         }
     }
 }

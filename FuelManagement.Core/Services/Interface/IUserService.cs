@@ -11,11 +11,14 @@ namespace FuelManagement.Core.Services.Interface
         User GetUserByUserName(string userName);
         User GetUserByNationalCode(string nationalCode);
         List<UserViewModel> GetUsersVm(string fullName);
-        void UpdateUser(User user);
-        void DeleteUser(int id, string userLog);
-        RoleToGiveUser GetRoleByUserId(long userId);
-        bool GetExist(string nationalCodeField);
         PaginatedList<UserViewModel> GetUsersVmPaged(string fullName, int pageIndex, int pageSize);
         User AddUser(Profile profile);
+        void UpdateUser(User user);
+        void DeleteUser(int id, string userLog);
+        RoleToGiveUser GetRoleByUserId(long userId); // اضافه شده
+        UserDetailViewModel GetUserProfileBy(string nationalCode);
+        UserDetailViewModel GetUserProfileBy(long id);
+        UserDetailViewModel GetUserProfileById(int id);
+        bool GetExist(string nationalCodeField);
     }
 }
