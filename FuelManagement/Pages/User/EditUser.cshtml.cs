@@ -47,7 +47,7 @@ namespace FuelManagement.UI.Pages.User
 
             // حالا که نقش‌ها برای کاربر بارگذاری شده‌اند، آن‌ها را به مدل ارسال می‌کنیم
             // فرض می‌کنیم که UserRoles به صورت لیستی از IDهای نقش‌ها است
-            //Model.user.UserRoles = user.UserRoles.Select(ur => ur.RoleId).ToList();
+            //user.UserRoles = user.UserRoles.Select(ur => ur.RoleId).ToList();
             return Page();
         }
 

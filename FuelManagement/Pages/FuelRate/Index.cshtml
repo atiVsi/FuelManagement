@@ -1,12 +1,13 @@
 ﻿@page
-@model FuelManagement.UI.Pages.Rules.IndexModel
+@model FuelManagement.UI.Pages.FuelRate.IndexModel
 @{
-    ViewData["Title"] = "لیست آیین نامه ها";
+    ViewData["Title"] = "لیست نرخ سوخت";
     Layout = "_Layout";
 
-    var startIndex = (Model.PageIndex - 1) * Model.Rules.PageSize;
+    var startIndex = (Model.PageIndex - 1) * Model.FuelRates.PageSize;
     var itemCount = startIndex;
 }
+
 
 <head>
     <style>
@@ -48,15 +49,13 @@
     </script>
 }
 
-
 <div class="side-app">
     <div class="main-container container-fluid">
         <div class="page-header">
-            <h1 class="page-title">لیست آیین نامه ها</h1>
+            <h1 class="page-title">لیست نرخ سوخت</h1>
             <div>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">اخبار و آیین نامه ها</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">لیست آیین نامه ها</li>
+                    <li class="breadcrumb-item active" aria-current="page">لیست نرخ</li>
                 </ol>
             </div>
         </div>
@@ -66,10 +65,10 @@
             <div class="col-12 col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h3 class="card-title mb-0">لیست آیین نامه ها </h3>
+                        <h3 class="card-title mb-0">لیست نرخ </h3>
                         <div>
-                            <a href="/Rules/CreateRules" class="btn btn-success">
-                                افزودن آیین نامه
+                            <a href="/FuelRate/CreateFuelRate" class="btn btn-success">
+                                افزودن نرخ سوخت
                             </a>
                         </div>
 
@@ -94,7 +93,7 @@
                                                                         <input type="text" class="form-control" id="search" name="SearchString" placeholder="جستجو عنوان ...">
                                                                         <div class="btn-group" role="group" aria-label="First group">
                                                                             <button type="submit" class="btn btn-primary">جستجو</button>
-                                                                            <a href="/Rules/Index" class="btn btn-outline-primary">نمایش همه</a>
+                                                                            <a href="/FuelRate/Index" class="btn btn-outline-primary">نمایش همه</a>
                                                                             <div class="btn-group" role="group" style="text-align:center;">
                                                                                 <button id="btnGroupVerticalDrop1" type="button" class="btn btn-primary dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="false" style="width: 9em;">
                                                                                     دریافت فایل
@@ -134,7 +133,7 @@
                                                                 </th>
 
                                                                 <th class="bg-transparent border-bottom-0">
-                                                                     توضیحات
+                                                                   مبلغ
                                                                 </th>
 
                                                                 <th class="bg-transparent border-bottom-0">
@@ -149,15 +148,14 @@
                                                                     فعال/غیرفعال
                                                                 </th>
 
-
                                                                 <th class="bg-transparent border-bottom-0"
                                                                     style="width: 5%;">عملیات</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            @if (Model.Rules != null)
+                                                            @if (Model.FuelRates != null)
                                                             {
-                                                                @foreach (var item in Model.Rules)
+                                                                @foreach (var item in Model.FuelRates)
                                                                 {
                                                                     itemCount += 1;
                                                                     <tr class="border-bottom">
@@ -169,34 +167,28 @@
                                                                             </div>
                                                                         </td>
                                                                         <td>
-                                                                            @*<div class="d-flex">
+                                                                       
 
-                                                                                <div class="ms-3 mt-0 mt-sm-2 d-block">
-                                                                                    <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        <a href="@item.RuleImage" class="image-link" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-url="@item.RuleImage" target="_blank">
-                                                                                            <img src="@item.RuleImage" alt="تصویر آیین نامه" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
-                                                                                        </a>
-                                                                                    </h6>
-                                                                                </div>
-                                                                            </div>*@
 
                                                                             <div class="d-flex">
                                                                                 <div class="ms-3 mt-0 mt-sm-2 d-block">
                                                                                     <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        <a href="@item.RuleImage" target="_blank" class="image-link" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-url="@item.RuleImage">
-                                                                                            @if (item.FileType == "pdf")
+                                                                                        <a href="@item.FuelRateImage" target="_blank" class="image-link" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-url="@item.FuelRateImage">
+                                                                                           <img src="@item.FuelRateImage" alt="تصویر خبر" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
+
+                                                                                            @* @if (item.Filetype == "pdf")
                                                                                             {
 
-                                                                                                <a href="@item.RuleImage" target="_blank">
+                                                                                                <a href="@item.FuelRateImage" target="_blank">
                                                                                                     <img src="~/assets/images/PDF_file_icon.svg.png" alt="فایل PDF" style="width: 40px; height: 40px;" />
                                                                                                 </a>
                                                                                             }
-
+                                                                                    
                                                                                             else
                                                                                             {
-                                                                                                <img src="@item.RuleImage" alt="تصویر آیین نامه" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
-
-                                                                                            }
+                                                                                                <img src="@item.FuelRateImage" alt="تصویر خبر" style="max-width: 100px; max-height: 50px; object-fit: cover;" />
+                                                                                           
+                                                                                            } *@
                                                                                         </a>
                                                                                     </h6>
                                                                                 </div>
@@ -204,15 +196,13 @@
 
 
 
-
-
                                                                         </td>
                                                                         <td>
                                                                             <div class="d-flex">
 
                                                                                 <div class="ms-3 mt-0 mt-sm-2 d-block">
                                                                                     <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        @item.Title
+                                                                                        @item.FuelType
                                                                                     </h6>
                                                                                 </div>
                                                                             </div>
@@ -223,7 +213,7 @@
 
                                                                                 <div class="ms-3 mt-0 mt-sm-2 d-block">
                                                                                     <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        @item.Description
+                                                                                        @item.Amount
                                                                                     </h6>
                                                                                 </div>
                                                                             </div>
@@ -234,7 +224,7 @@
 
                                                                                 <div class="ms-3 mt-0 mt-sm-2 d-block">
                                                                                     <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        @item.Creationdate
+                                                                                        @item.PublishDate
                                                                                     </h6>
                                                                                 </div>
                                                                             </div>
@@ -244,7 +234,7 @@
 
                                                                                 <div class="ms-3 mt-0 mt-sm-2 d-block">
                                                                                     <h6 class="mb-0 fs-14 fw-semibold">
-                                                                                        @item.Userlog
+                                                                                        @item.UserLog
                                                                                     </h6>
                                                                                 </div>
                                                                             </div>
@@ -274,7 +264,7 @@
                                                                                     <span class="fe fe-eye fs-14"></span>
                                                                                 </button>
 
-                                                                                <a href="/Rules/EditNews?id=@item.Id" class="btn text-primary btn-sm" title="ویرایش">
+                                                                                <a href="/FuelRate/EditFuelRate?id=@item.Id" class="btn text-primary btn-sm" title="ویرایش">
                                                                                     <span class="fe fe-edit fs-14"></span>
                                                                                 </a>
 
@@ -292,11 +282,11 @@
                                                                                 <input type="hidden" name="id" value="@item.Id" />
                                                                                 <div class="modal-content">
                                                                                     <div class="modal-header">
-                                                                                        <h5 class="modal-title" id="deleteModalLabel_@item.Id">حذف آیین نامه</h5>
+                                                                                        <h5 class="modal-title" id="deleteModalLabel_@item.Id">حذف نرخ</h5>
                                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
                                                                                     </div>
                                                                                     <div class="modal-body">
-                                                                                        آیا مطمئن هستید که می‌خواهید آیین نامه <strong class="badge bg-danger">@item.Title</strong> را حذف کنید؟
+                                                                                        آیا مطمئن هستید که می‌خواهید نرخ سوخت <strong class="badge bg-danger">@item.FuelType</strong> را حذف کنید؟
                                                                                     </div>
                                                                                     <div class="modal-footer">
                                                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">لغو</button>
@@ -312,35 +302,31 @@
                                                                         <div class="modal-dialog modal-lg modal-dialog-centered">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
-                                                                                    <h5 class="modal-title" id="detailsModalLabel_@item.Id">جزئیات آیین نامه</h5>
+                                                                                    <h5 class="modal-title" id="detailsModalLabel_@item.Id">جزئیات نرخ</h5>
                                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
                                                                                 </div>
                                                                                 <div class="modal-body">
-                                                                                 @*   <div class="text-center mb-4">
-                                                                                        <img src="@item.RuleImage" alt="" style="max-width: 100%; max-height: 300px; object-fit: contain;" />
-                                                                                    </div>*@
-
                                                                                     <div class="text-center mb-4">
-                                                                                        <img src="@item.RuleImage"
-                                                                                             alt="تصویر ضمیمه"
-                                                                                             style="max-width: 100%; max-height: 300px; object-fit: contain;"
-                                                                                             onerror="this.onerror=null; this.src='assets/images/PDF_file_icon.svg.png';" />
+                                                                                        <img src="@item.FuelRateImage" alt="تصویر خبر" style="max-width: 100%; max-height: 300px; object-fit: contain;" />
                                                                                     </div>
                                                                                     <form>
                                                                                         <div class="mb-3">
-                                                                                            <label for="title_@item.Id" class="form-label fw-bold">عنوان آیین نامه</label>
-                                                                                            <input type="text" id="title_@item.Id" class="form-control" value="@item.Title" readonly />
+                                                                                            <label for="title_@item.Id" class="form-label fw-bold">عنوان </label>
+                                                                                            <input type="text" id="title_@item.Id" class="form-control" value="@item.FuelType" readonly />
                                                                                         </div>
                                                                                         <div class="mb-3">
-                                                                                            <label for="description_@item.Id" class="form-label fw-bold">توضیحات</label>
-                                                                                            <textarea id="description_@item.Id" class="form-control" rows="4" readonly>@item.Description</textarea>
+                                                                                            <label for="description_@item.Id" class="form-label fw-bold">مبلغ </label>
+                                                                                            <textarea id="description_@item.Id" class="form-control" rows="4" readonly>@item.Amount</textarea>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-6 mb-3">
                                                                                                 <label for="creationDate_@item.Id" class="form-label fw-bold">تاریخ ایجاد</label>
-                                                                                                <input type="text" id="creationDate_@item.Id" class="form-control" value="@item.Creationdate" readonly />
+                                                                                                <input type="text" id="creationDate_@item.Id" class="form-control" value="@item.PublishDate" readonly />
                                                                                             </div>
-                                                                                           
+                                                                                            <div class="col-md-6 mb-3">
+                                                                                                <label for="publishDate_@item.Id" class="form-label fw-bold">تاریخ انتشار</label>
+                                                                                                <input type="text" id="publishDate_@item.Id" class="form-control" value="@(item.PublishDateJalali ?? "نامشخص")" readonly />
+                                                                                            </div>
                                                                                         </div>
                                                                                     </form>
                                                                                 </div>
@@ -350,6 +336,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+
 
 
                                                                 }
@@ -367,7 +354,7 @@
 
                                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                                         <span class="text-muted">
-                                                            تعداد کل آیتم‌ها: <strong>@Model.Rules.TotalCount</strong>
+                                                            تعداد کل آیتم‌ها: <strong>@Model.FuelRates.TotalCount</strong>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -378,18 +365,18 @@
                                                 <!-- 🟦 بلوک صفحه‌بندی -->
                                                 <nav aria-label="Page navigation" class="mt-3">
                                                     <ul class="pagination">
-                                                        <li class="page-item page-prev @(Model.Rules.HasPreviousPage ? "" : "disabled")">
+                                                        <li class="page-item page-prev @(Model.FuelRates.HasPreviousPage ? "" : "disabled")">
                                                             <a class="page-link" href="?pageIndex=@(Model.PageIndex - 1)&searchString=@Model.SearchString">قبلی</a>
                                                         </li>
 
-                                                        @for (int i = 1; i <= Model.Rules.TotalPages; i++)
+                                                        @for (int i = 1; i <= Model.FuelRates.TotalPages; i++)
                                                         {
                                                             <li class="page-item @(i == Model.PageIndex ? "active" : "")">
                                                                 <a class="page-link" href="?pageIndex=@i&searchString=@Model.SearchString">@i</a>
                                                             </li>
                                                         }
 
-                                                        <li class="page-item page-next @(Model.Rules.HasNextPage ? "" : "disabled")">
+                                                        <li class="page-item page-next @(Model.FuelRates.HasNextPage ? "" : "disabled")">
                                                             <a class="page-link" href="?pageIndex=@(Model.PageIndex + 1)&searchString=@Model.SearchString">بعدی</a>
                                                         </li>
                                                     </ul>
@@ -412,6 +399,11 @@
 </div>
 
 
+
+
+
+
+
 @*پیش نمایش تصویر*@
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -426,6 +418,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 @section Scripts {
 
@@ -444,7 +439,7 @@
             }
             btn.addEventListener('click', function () {
                 const wb = XLSX.utils.table_to_book(tbl, { sheet: "Sheet1" });
-                XLSX.writeFile(wb, 'Rules.xlsx');
+                XLSX.writeFile(wb, 'FuelRate.xlsx');
             });
         });
 

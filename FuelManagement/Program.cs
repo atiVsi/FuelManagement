@@ -2,14 +2,14 @@
 using FuelManagement.Core.Services;
 using FuelManagement.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
+using FuelManagement.Core.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IRulesService, RulesService>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
-
+builder.Services.AddScoped<IFuelRateService, FuelRateService>();
 
 builder.Services.AddDbContext<FuelmanagementContext>(options =>
 {

@@ -36,6 +36,8 @@ public class RepositoryBase<TKey, T> : IRepository<TKey, T> where T : class
     {
         _context.AddAsync(entity);
     }
+
+
     public bool Exists(Expression<Func<T, bool>> exception)
     {
         return _context.Set<T>().Any(exception);

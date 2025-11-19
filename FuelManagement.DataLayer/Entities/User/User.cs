@@ -30,7 +30,7 @@ namespace FuelManagement.DataLayer.Entities.User
         public DateTime? EditTime { get; private set; }
 
         // اضافه کردن ویژگی UserRoles برای ذخیره ارتباط با نقش‌ها
-        //public List<UserRole> UserRoles { get; private set; } = new List<UserRole>();
+        public List<UserRole> UserRoles { get; private set; } = new List<UserRole>();
 
         public User(string userName, string firstname, string lastName, string nationalCodeField, string mobilePhoneNumber)
         {

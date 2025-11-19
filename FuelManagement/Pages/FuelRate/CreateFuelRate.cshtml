@@ -1,0 +1,110 @@
+﻿@page
+@model FuelManagement.UI.Pages.FuelRate.CreateFuelRateModel
+@{
+
+    ViewData["Title"] = "افزودن نرخ سوخت";
+    Layout = "_Layout";
+}
+<link href="~/lib/datepicker/jalalidatepicker.min.css" rel="stylesheet" />
+<link href="~/lib/datepicker/style.css" rel="stylesheet" />
+
+<div class="side-app">
+    <div class="main-container container-fluid">
+        <div class="page-header">
+            <h1 class="page-title"> افزودن نرخ سوخت</h1>
+            <div>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-page="/FuelRate/Index">لیست نرخ های سوخت </a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> افزودن نرخ جدید </li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="row row-cards">
+            <div class="col-12 col-sm-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">افزودن نرخ</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label asp-for="Createnew.FuelType" class="control-label">عنوان</label>
+                                    <input asp-for="Createnew.FuelType" class="form-control" placeholder="عنوان نرخ" />
+                                    <span asp-validation-for="Createnew.FuelType" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label asp-for="Createnew.FuelRateImage" class="control-label">تصویر خبر</label>
+                                    <input asp-for="Createnew.FuelRateImage" class="form-control" type="file" multiple id="FuelRateImageInput" />
+                                    <span asp-validation-for="Createnew.FuelRateImage" class="text-danger"></span>
+
+                                    <div class="mt-2">
+                                        <img id="previewImage" src="#" alt="پیش‌نمایش تصویر" style="max-width: 150px; max-height: 100px; display: none; object-fit: cover; border: 1px solid #ddd; padding: 3px;" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-12">
+                                    <label asp-for="Createnew.Amount" class="control-label">مبلغ</label>
+                                    <input asp-for="Createnew.Amount" class="form-control" placeholder="مبلغ " />
+                                    @* <textarea asp-for="Createnew.Amount" class="form-control" rows="5" placeholder="متن خبر"></textarea> *@
+                                    <span asp-validation-for="Createnew.Amount" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                            <input type="hidden" name="bRedirect" value="true" />
+
+                            <div class="mb-0 mt-4 row justify-content-end">
+                                <div class="col-md-9">
+                                    <button class="btn btn-primary" type="submit">ثبت</button>
+                                    <a class="btn btn-secondary" href="/FuelRate/Index">انصراف</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>            <!-- COL-END -->
+        </div>
+
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/lib/datepicker/jalalidatepicker.min.js"></script>
+    <script src="~/lib/datepicker/script.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('FuelRateImageInput');
+            const preview = document.getElementById('previewImage');
+
+            input.addEventListener('change', function () {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.src = '#';
+                    preview.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

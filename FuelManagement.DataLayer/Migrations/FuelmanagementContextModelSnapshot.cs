@@ -22,6 +22,53 @@ namespace FuelManagement.DataLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("FuelManagement.DataLayer.Entities.FuelRate.FuelRate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Amount")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FuelRateImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FuelType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("PublishDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PublishDateJalali")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdateDateJalali")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserLog")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FuelRates");
+                });
+
             modelBuilder.Entity("FuelManagement.DataLayer.Entities.FuelRecord", b =>
                 {
                     b.Property<int>("Id")
@@ -103,6 +150,10 @@ namespace FuelManagement.DataLayer.Migrations
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
+                    b.Property<string>("NationalCodeField")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<long?>("ParentId")
                         .HasMaxLength(200)
                         .HasColumnType("bigint");
@@ -120,45 +171,6 @@ namespace FuelManagement.DataLayer.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("Permissions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreationDate = new DateTime(2025, 11, 12, 10, 57, 2, 77, DateTimeKind.Local).AddTicks(4118),
-                            IsDelete = false,
-                            PermissionTitle = "مدیریت کاربران"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CreationDate = new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1330),
-                            IsDelete = false,
-                            PermissionTitle = "مدیریت نقش‌ها"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            CreationDate = new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1340),
-                            IsDelete = false,
-                            PermissionTitle = "مشاهده گزارشات"
-                        },
-                        new
-                        {
-                            Id = 4L,
-                            CreationDate = new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1342),
-                            IsDelete = false,
-                            ParentId = 3L,
-                            PermissionTitle = "ایجاد گزارش"
-                        },
-                        new
-                        {
-                            Id = 5L,
-                            CreationDate = new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1343),
-                            IsDelete = false,
-                            ParentId = 3L,
-                            PermissionTitle = "حذف گزارش"
-                        });
                 });
 
             modelBuilder.Entity("FuelManagement.DataLayer.Entities.Permission.Role", b =>
@@ -250,44 +262,6 @@ namespace FuelManagement.DataLayer.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
-                });
-
-            modelBuilder.Entity("FuelManagement.DataLayer.Entities.Rules.Rules", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FileType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("RuleImage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("UserLog")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rules");
                 });
 
             modelBuilder.Entity("FuelManagement.DataLayer.Entities.User.User", b =>
@@ -417,7 +391,7 @@ namespace FuelManagement.DataLayer.Migrations
                         .IsRequired();
 
                     b.HasOne("FuelManagement.DataLayer.Entities.User.User", "User")
-                        .WithMany()
+                        .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -449,6 +423,11 @@ namespace FuelManagement.DataLayer.Migrations
                 {
                     b.Navigation("RolePermissions");
 
+                    b.Navigation("UserRoles");
+                });
+
+            modelBuilder.Entity("FuelManagement.DataLayer.Entities.User.User", b =>
+                {
                     b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618

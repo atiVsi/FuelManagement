@@ -11,6 +11,7 @@ public class EntityBase
 {
     [Key]
     public long Id { get; set; }
+    
     public DateTime CreationDate { get; set; } = DateTime.Now;
     public bool IsDelete { get; set; }
 

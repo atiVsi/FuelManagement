@@ -39,10 +39,10 @@ namespace FuelManagement.DataLayer.Migrations
                 column: "CreationDate",
                 value: new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1342));
 
-            migrationBuilder.InsertData(
-                table: "Permissions",
-                columns: new[] { "Id", "CreationDate", "IsDelete", "ParentId", "PermissionTitle", "UserLog" },
-                values: new object[] { 5L, new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1343), false, 3L, "حذف گزارش", null });
+            //migrationBuilder.InsertData(
+            //    table: "Permissions",
+            //    columns: new[] { "Id", "CreationDate", "IsDelete", "ParentId", "PermissionTitle", "UserLog" },
+            //    values: new object[] { 5L, new DateTime(2025, 11, 12, 10, 57, 2, 78, DateTimeKind.Local).AddTicks(1343), false, 3L, "حذف گزارش", null });
         }
 
         /// <inheritdoc />

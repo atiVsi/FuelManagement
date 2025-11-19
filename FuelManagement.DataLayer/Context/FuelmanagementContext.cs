@@ -1,5 +1,7 @@
 ﻿using FuelManagement.DataLayer.Entities;
+using FuelManagement.DataLayer.Entities.FuelRate;
 using FuelManagement.DataLayer.Entities.Permission;
+using FuelManagement.DataLayer.Entities.Rules;
 using FuelManagement.DataLayer.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -9,7 +11,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FuelManagement.DataLayer.Entities.Rules;
 namespace FuelManagement.DataLayer.Context;
 
 public class FuelmanagementContext : DbContext
@@ -21,7 +22,7 @@ public class FuelmanagementContext : DbContext
     public DbSet<LogEntry> LogEntries { get; set; }
 
     public DbSet<FuelRecord> FuelRecords { get; set; }
-    public DbSet<Rules> Rules { get; set; }
+ 
     #region User
     public DbSet<Role> Roles { get; set; }
     public DbSet<User> Users { get; set; }
@@ -34,7 +35,8 @@ public class FuelmanagementContext : DbContext
     public DbSet<RolePermission> RolePermissions { get; set; }
 
     #endregion
-    
+    public DbSet<FuelRate> FuelRates { get; set; }
+
 }
 
 

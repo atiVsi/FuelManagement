@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/FuelRate/CreateFuelRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnVlbFJhdGVcQ3JlYXRlRnVlbFJhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/FuelRate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnVlbFJhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,14 +62,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Role/RoleDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVxSb2xlRGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Rules/CreateRules.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUnVsZXNcQ3JlYXRlUnVsZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Rules/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUnVsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/avassi/source/repos/FuelManagement/FuelManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]

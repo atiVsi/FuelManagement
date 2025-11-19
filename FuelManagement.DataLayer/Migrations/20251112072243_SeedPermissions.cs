@@ -60,16 +60,16 @@ namespace FuelManagement.DataLayer.Migrations
                     table.PrimaryKey("PK_Rules", x => x.Id);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Permissions",
-                columns: new[] { "Id", "CreationDate", "IsDelete", "ParentId", "PermissionTitle", "UserLog" },
-                values: new object[,]
-                {
-                    { 1L, new DateTime(2025, 11, 12, 10, 52, 42, 352, DateTimeKind.Local).AddTicks(4921), false, null, "مدیریت کاربران", null },
-                    { 2L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1806), false, null, "مدیریت نقش‌ها", null },
-                    { 3L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1817), false, null, "مشاهده گزارشات", null },
-                    { 4L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1819), false, 3L, "ایجاد گزارش", null }
-                });
+            //migrationBuilder.InsertData(
+            //    table: "Permissions",
+            //    columns: new[] { "Id", "CreationDate", "IsDelete", "ParentId", "PermissionTitle", "UserLog" },
+            //    values: new object[,]
+            //    {
+            //        { 1L, new DateTime(2025, 11, 12, 10, 52, 42, 352, DateTimeKind.Local).AddTicks(4921), false, null, "مدیریت کاربران", null },
+            //        { 2L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1806), false, null, "مدیریت نقش‌ها", null },
+            //        { 3L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1817), false, null, "مشاهده گزارشات", null },
+            //        { 4L, new DateTime(2025, 11, 12, 10, 52, 42, 353, DateTimeKind.Local).AddTicks(1819), false, 3L, "ایجاد گزارش", null }
+            //    });
         }
 
         /// <inheritdoc />

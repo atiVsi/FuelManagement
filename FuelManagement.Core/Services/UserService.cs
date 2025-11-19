@@ -100,7 +100,7 @@ namespace FuelManagement.Core.Services
                     UserName = u.UserName,
                     NationalCodeField = u.NationalCodeField,
                     MobilePhoneNumber = u.MobilePhoneNumber,
-                    //UserRoles = u.UserRoles.Select(ur => ur.RoleId).ToList()
+                    UserRoles = u.UserRoles.Select(ur => ur.RoleId).ToList()
                 }).FirstOrDefault();
 
             return user;

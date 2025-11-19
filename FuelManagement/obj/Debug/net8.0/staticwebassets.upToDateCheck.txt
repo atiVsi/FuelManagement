@@ -1428,3 +1428,15 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\fuelrate\080f22877e7e4d8c9140137750de9ef0.jpg
+wwwroot\uploads\fuelrate\1925fc82-8a9d-4cea-90c1-cd98e3cbf1e4.jpg
+wwwroot\uploads\fuelrate\19cfbbd0-ec35-4715-8839-b59dae17c79e.jpg
+wwwroot\uploads\fuelrate\43f62d4c77f34f77807f32f4e4198f88.jpg
+wwwroot\uploads\fuelrate\5429474b5b584bad9fe1c7a63f256b25.jpg
+wwwroot\uploads\fuelrate\6214a85e-2299-47f8-9bb4-b94984bf462a.jpg
+wwwroot\uploads\fuelrate\871011fe-a47e-4d67-96c6-21c6b062370c.jpg
+wwwroot\uploads\fuelrate\a2fd5310767c4ad784b33a7e8c5ab9be.jpg
+wwwroot\uploads\fuelrate\c4620b34-eeec-4c7a-861f-287ec65aaa35.jpg
+wwwroot\uploads\fuelrate\c55dbf11-058b-45ec-873a-dced43c85dd5.jpg
+wwwroot\uploads\fuelrate\cc998979a9bf40f2834ff13551be671d.jpg
+wwwroot\uploads\fuelrate\d1cae22e4ce6452cb561f933b1a318d7.jpg
